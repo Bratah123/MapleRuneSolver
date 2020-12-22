@@ -19,17 +19,7 @@ def final_prime(combo, cache):
     combo.append("RIGHT")
     return combo
 
-def find_first_rune(region):
-    if pyautogui.locateOnScreen('left_rune_arrow.png', region=region, confidence=0.8) != None:
-        return "LEFT"
-    elif pyautogui.locateOnScreen('up_rune_arrow.png', region=region, confidence=0.8) != None:
-        return "UP"
-    elif pyautogui.locateOnScreen('down_rune_arrow.png', region=region, confidence=0.8) != None:
-        return "DOWN"
-    else:
-        return False
-
-def find_second_rune(region):
+def find_rune_at_region(region):
     if pyautogui.locateOnScreen('left_rune_arrow.png', region=region, confidence=0.8) != None:
         return "LEFT"
     elif pyautogui.locateOnScreen('up_rune_arrow.png', region=region, confidence=0.8) != None:
@@ -50,11 +40,11 @@ def main():
     cache = reference_list
     combo = []
 
-    first_rune = find_first_rune(first_rune_region)
+    first_rune = find_rune_at_region(first_rune_region)
     cache.remove(first_rune)
     combo.append(first_rune)
 
-    second_rune = find_second_rune(second_rune_region)
+    second_rune = find_rune_at_region(second_rune_region)
     cache.remove(second_rune)
     combo.append(second_rune)
 
