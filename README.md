@@ -7,3 +7,6 @@ A vision-based Rune solver, mostly used for Maplestory versions that have static
 
 ## Installation
 - Run the script, then click on the maplestory process while the rune is being used,
+
+## Gallery
+- PICTURES/VIDEOS to be added soon
